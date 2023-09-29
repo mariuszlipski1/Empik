@@ -1,4 +1,4 @@
-package com.mlipski.empik.command.feature.model;
+package com.mlipski.empik.command.github.model;
 
 public record PayloadGithub(
         Long id,

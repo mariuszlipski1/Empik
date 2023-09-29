@@ -10,19 +10,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler({
-        SQLDatabaseException.class,
-        JsonException.class
-    })
-    public ResponseEntity<ErrorResponse> generateInternalServerErrorException(Exception ex) {
-        return ResponseEntity
-            .status(HttpStatus.INTERNAL_SERVER_ERROR)
-            .body(ErrorResponse
-                .builder()
-                .message(ex.getMessage())
-                .build());
-    }
-
-    @ExceptionHandler({
         NoFoundException.class
     })
     public ResponseEntity<ErrorResponse> generateNoFoundException(Exception ex) {
@@ -48,4 +35,3 @@ public class GlobalExceptionHandler {
                 .build());
     }
 }
-

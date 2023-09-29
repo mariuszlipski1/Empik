@@ -1,4 +1,4 @@
-package com.mlipski.empik.query;
+package com.mlipski.empik.command.api_usage;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -21,5 +21,4 @@ public class ApiUsage {
 
         @Column(name = "request_count", nullable = false)
         private Long requestCount;
-
 }
